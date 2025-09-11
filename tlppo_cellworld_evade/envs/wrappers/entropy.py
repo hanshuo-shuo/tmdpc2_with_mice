@@ -252,7 +252,7 @@ class MypreyWrapper(gym.Wrapper):
         # else:
         #     print('Predator is not visible')
         obs = np.delete(obs, -4)
-        return obs, reward, done, info
+        return obs, reward, False, info
 
     @property
     def unwrapped(self):
@@ -303,7 +303,7 @@ class MypreyWrapper_v2(gym.Wrapper):
         obs = obs.astype(np.float32)
         new_obs = obs.copy()
         new_obs = np.delete(new_obs, -4)
-        return new_obs, reward, done, info
+        return new_obs, reward, False, info
 
     @property
     def unwrapped(self):
