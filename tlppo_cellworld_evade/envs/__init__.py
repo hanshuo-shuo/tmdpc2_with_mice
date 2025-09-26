@@ -6,7 +6,7 @@ import gymnasium
 from envs.wrappers.time_limit import TimeLimit
 from envs.wrappers.tensor import TensorWrapper
 from envs.wrappers.gym import GymnasiumToGymWrapper
-from envs.wrappers.entropy import uncertainty_wrapper_predator, EntropyCalculationWrapper, MypreyWrapper
+from envs.wrappers.wrapper import MypreyWrapper
 import cellworld_gym as cwg
 
 # filter warnings
@@ -29,17 +29,9 @@ def make_env(cfg, max_episode_steps):
                          real_time=False,
                          reward_function=cwg.Reward({"puffed": cfg.panelty, "finished": 1}),
                          action_type=cwg.BotEvadeEnv.ActionType.CONTINUOUS)
-    # env.model.goal_threshold = -1 # NO exit close env
-    # env = GymnasiumToGymWrapper(env, cfg)
-    # env = Environment()
-    # env = MypreyWrapper_v2(env, cfg)
+
     env = MypreyWrapper(env, cfg)
-    # env = uncertainty_wrapper_predator(env, cfg)
-    # env = EntropyCalculationWrapper(
-    #     env,
-    #     alpha=1.0,
-    #     beta=1.0
-    # )
+
     env = TimeLimit(env, max_episode_steps=max_episode_steps)
     env.max_episode_steps = env._max_episode_steps
     return env
