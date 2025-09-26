@@ -11,10 +11,10 @@ source ~/.bashrc
 conda activate shuo_1
 
 # Run a Python script using Conda environment
-# python train.py seed=1234 ptsb=true
-# python train.py seed=7654 ptsb=true
-# python train.py seed=2345 ptsb=true
-# python train.py seed=6543 ptsb=true
+# python train.py seed=1234 
+# python train.py seed=7654 
+# python train.py seed=2345 
+# python train.py seed=6543 
 # python train.py seed=1234
 # python train.py seed=2345
 # python train.py seed=3456
