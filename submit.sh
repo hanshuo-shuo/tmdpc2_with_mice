@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=rerere
-#SBATCH --output=result_new_ptsb.txt
+#SBATCH --output=result_new.txt
 #SBATCH --partition=job
 #SBATCH --time=48:00:00  
 #SBATCH --cpus-per-task=1
