@@ -27,6 +27,8 @@ class MypreyWrapper(gym.Wrapper):
         else:
             return False
 
+    # set done as false because the tdmpc2 needs every eposid to be the same during training(default use), set done=done when evaluation.
+    
     def step(self, action):
         obs, reward, done, _, info = self.env.step(action.copy())
         obs = obs.astype(np.float32)
