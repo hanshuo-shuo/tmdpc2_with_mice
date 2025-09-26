@@ -23,12 +23,7 @@ def train(cfg: dict):
 	set_seed(cfg.seed)
 	print(colored('Work dir:', 'yellow', attrs=['bold']), cfg.work_dir)
 
-	if cfg.ptsb:
-		buffer = PTSDBuffer2(cfg)
-		print('Using PTSDBuffer')
-	else:
-		buffer = Buffer(cfg)
-		print('Using normal Buffer')
+	buffer = Buffer(cfg)
 
 	trainer = OnlineTrainer(
 		cfg=cfg,
