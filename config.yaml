@@ -2,11 +2,7 @@ defaults:
     - override hydra/launcher: basic
 
 # environment
-# task: vp-tdmpc2-v2(<0.5)
-# task: cluster_v2
 task: alex_exp
-# task: cellworld_baseline_tdmpc
-# task: cellworld_ptsb_baseline_tdmpc
 exp_name: spread_exp
 
 panelty: -200
