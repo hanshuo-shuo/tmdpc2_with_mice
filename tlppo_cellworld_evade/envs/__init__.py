@@ -6,7 +6,7 @@ import gymnasium
 from envs.wrappers.time_limit import TimeLimit
 from envs.wrappers.tensor import TensorWrapper
 from envs.wrappers.gym import GymnasiumToGymWrapper
-from envs.wrappers.entropy import uncertainty_wrapper_predator, EntropyCalculationWrapper, MypreyWrapper, MypreyWrapper_v2
+from envs.wrappers.entropy import uncertainty_wrapper_predator, EntropyCalculationWrapper, MypreyWrapper
 import cellworld_gym as cwg
 
 # filter warnings
