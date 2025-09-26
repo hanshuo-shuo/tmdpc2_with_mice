@@ -21,7 +21,6 @@ checkpoint: ???
 eval_episodes: 1000
 eval_freq: 1000
 
-ptsb: false
 
 
 steps: 10_0000
