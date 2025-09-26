@@ -89,7 +89,10 @@ class TDMPC2:
 			# Calculate prediction error by comparing predicted next state with current state encoding
 			current_z = self.model.encode(new_obs, task)
 			prediction_error = F.mse_loss(predicted_next_z, current_z)
-			return a.cpu(), prediction_error
+			#train	
+			return a.cpu()
+			#eval mode
+			# return a.cpu(), prediction_error
 	
 		z = self.model.encode(new_obs, task)
 		a = self.plan(z, t0=t0, eval_mode=eval_mode, task=task)
