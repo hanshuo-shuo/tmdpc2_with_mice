@@ -31,13 +31,6 @@ def train(cfg: dict):
 		buffer=buffer,
 		logger=Logger(cfg),
 	)
-	# trainer = OnlineTrainer(
-	# 	cfg=cfg,
-	# 	env=make_prey_env(cfg),
-	# 	agent=TDMPC2(cfg),
-	# 	buffer=PTSDBuffer(cfg),
-	# 	logger=Logger(cfg),
-	# )
 	trainer.train()
 	print('\nTraining completed')
 

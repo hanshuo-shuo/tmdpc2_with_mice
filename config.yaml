@@ -7,16 +7,14 @@ exp_name: spread_exp
 
 panelty: -200
 time_step: 0.25
-# world_name: "21_05"
 # world_name: ???
 save_name: ???
-world_name: ???
+world_name: "clump01_05"
 
 # evaluation
 checkpoint: ???
-eval_episodes: 1000
+eval_episodes: 10
 eval_freq: 1000
-
 
 
 steps: 10_0000
@@ -37,7 +35,7 @@ data_dir: ???
 
 # planning
 mpc: true
-iterations: 5
+iterations: 6
 num_samples: 512
 num_elites: 64
 num_pi_trajs: 24
@@ -58,7 +56,7 @@ vmin: -10
 vmax: +10
 
 # architecture
-model_size: 5
+model_size: 1
 num_enc_layers: 2
 enc_dim: 256
 mlp_dim: 512
@@ -78,7 +76,9 @@ save_csv: true
 # misc
 save_video: false
 save_agent: true
-seed: ???
+seed: 123
+
+
 
 # convenience
 work_dir: ???

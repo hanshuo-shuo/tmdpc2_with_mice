@@ -25,7 +25,7 @@ def make_env(cfg, max_episode_steps):
                          use_predator=True,
                          max_step=max_episode_steps,
                          time_step=cfg.time_step,
-                         render=False,
+                         render=True,
                          real_time=False,
                          reward_function=cwg.Reward({"puffed": cfg.panelty, "finished": 1}),
                          action_type=cwg.BotEvadeEnv.ActionType.CONTINUOUS)
