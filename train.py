@@ -7,10 +7,9 @@ from termcolor import colored
 
 from common.parser import parse_cfg
 from common.seed import set_seed
-from common.buffer import Buffer, PTSDBuffer, PTSDBuffer2
+from common.buffer import Buffer
 from envs import make_prey_env
 from tdmpc2 import TDMPC2
-from tdmpc_surprise import TDMPC_surprise
 from trainer.online_trainer import OnlineTrainer
 from common.logger import Logger
 
